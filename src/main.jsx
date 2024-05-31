@@ -7,11 +7,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar.jsx';
+import Home from './Components/Home/Home.jsx';
+import Users from './Components/Users/Users.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar></Navbar>,
+    element: <Home></Home>,
     children:[
       {
         path: "/home",
@@ -22,8 +24,9 @@ const router = createBrowserRouter([
         element : <div>hello from contact</div>
       },
       {
-        path :"/blog",
-        element : <div>hello from blog</div>
+        path :"/users",
+        loader : ()=>fetch('https://jsonplaceholder.typicode.com/users'),
+        element : <Users></Users>
       },
       {
         path :'/FAQ',
