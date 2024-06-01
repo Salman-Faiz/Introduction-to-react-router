@@ -1,5 +1,5 @@
 import User from '../User/User';
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 const Users = () => {
     const users = useLoaderData();
     return (
@@ -10,6 +10,7 @@ const Users = () => {
                 {
                 users.map(user => <User user={user}></User>)
             }
+         
              </div>
             
         </div>
