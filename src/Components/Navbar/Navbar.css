@@ -1,0 +1,7 @@
+nav a.active{
+    background-color: blue;
+    padding: 4px;
+    border-radius: 5px;
+    color: azure;
+
+}
