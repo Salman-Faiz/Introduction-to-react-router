@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const User = ({user}) => {
     const {id,name,email,username,address,phone} =user;
     const navigate= useNavigate();
+    
     const handleDetails =()=>{
         navigate(`/users/${id}`);
     }
